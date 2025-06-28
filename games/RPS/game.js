@@ -100,14 +100,15 @@ function playGround(playerChoice) {
           disableButtons(true);
           showModal(winner);
         } else {
-          disableButtons(false);
+          setTimeout(() => {
+            disableButtons(false);}, 400);
         }
       }, 200);
       card.classList.remove("rotate");
       clearSelected();
-      
     }, 1700);
 }
+
 
 buttons.forEach((btn) => {
     btn.addEventListener('click', function () {
