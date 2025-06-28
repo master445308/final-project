@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background: url(../images/bg.avif);
+}
+
+.container {
+    background-color: #fff;
+    width: 800px;
+    min-height: 500px;
+    border: 10px solid #fff;
+    margin: 0 auto;
+}
+
+header {
+    height: 150px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.title-block {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    color: #fff;
+    background: url(../images/picture.avif) no-repeat center center / cover;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.title-block::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.4;
+}
+
+#title {
+    position: relative;
+    z-index: 1;
+}
+
+.userpic {
+    height: 100%;
+    width: 20%;
+    background: url(../images/avatar.jpg) no-repeat center / cover;
+}
+
+nav ul {
+    display: flex;
+    margin: 10px 0;
+    background-color: #dfdbdb;
+}
+
+nav li a {
+    display: flex;
+    padding: 20px;
+    text-decoration: none;
+    color: #575252;
+    font-weight: bold;
+    border-right: 2px solid #d1cbcb;
+    transition: background 0.3s ease;
+}
+
+nav li a:hover {
+    background-color: #a7a3a3;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content-wrapper {
+    display: flex;
+}
+
+.content {
+    width: 70%;
+    padding: 20px;
+}
+
+.content p {
+    line-height: 20px;
+}
+
+.sidebar {
+    width: 30%;
+    padding: 20px;
+}
+
+.sidebar ul {
+    margin-bottom: 10px;
+}
+
+.skills li a {
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+    transition: transform .3s ease;
+}
+
+.skills li a:hover {
+    transform: translateX(10px);
+}
+
+#happy-choise {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    transition: color 0.3s;
+}
+
+#happy-choise:hover {
+    color: #1f62d6;
+}
+
+/* footer */
+footer {
+    background-color: #010122;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-wrapper {
+    overflow: hidden;
+    min-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.footer-contact {
+    font-size: 1em;
+}
+
+.footer-contact p {
+    margin: 5px;
+}
+
+.footer-social {
+    display: flex;
+    margin: 15px;
+    gap: 5px;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.footer-copy {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.social-btn img {
+    width: 30px;
+    height: 30px;
+    background: none;
+    transition: all .3s ease;
+}
+.social-btn:hover img {
+    transform: scale(1.2);
+    opacity: .8;
+}   
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 50px;
+  }
+  .container {
+    width: 90%;
+    border-width: 5px;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .title-block,
+  .userpic {
+    width: 100%;
+    margin: 0;
+  }
+
+  .title-block {
+    height: 100px;
+  }
+
+  .userpic {
+    height: 330px;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li a {
+    border-right: none;
+    border-bottom: 1px solid rgb(209, 203, 203);
+    justify-content: center;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .content,
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .content p {
+    padding-right: 10px;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .title-block {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  nav li a {
+    padding: 15px;
+    font-size: 0.9em;
+  }
+
+  #toggle-button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+
+  .footer-logo {
+    font-size: 1.2em;
+  }
+
+  .social-btn img {
+    width: 24px;
+    height: 24px;
+  }
+}
